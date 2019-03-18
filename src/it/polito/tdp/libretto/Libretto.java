@@ -35,6 +35,24 @@ public class Libretto {
 			}
 		}
 		return result;
-		
 	}
+	
+	/**
+	 * Ricerca un voto relativo al corso di cui è specificato il nome
+	 * 
+	 * @param nomeEsame nome del corso da cercare
+	 * @return il {@link Voto} corrispondente, oppure {@code null} se non esistente
+	 */
+	
+	public Voto cercaEsame(String nomeEsame) {
+		for(Voto v: this.voti) {
+			if(v.getCorso().equals(nomeEsame)) {
+				return v;
+			}	
+		}
+		
+		return null;
+	}
+	
+	
 }
